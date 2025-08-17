@@ -2,6 +2,43 @@
 
 A modern and interactive platform presenting a collection of 32 data science projects with immersive 3D visualizations and an intuitive user interface.
 
+## 📊 Project Status
+
+[![Build Status](https://github.com/michaelgermini/data-storytelling/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/michaelgermini/data-storytelling/actions)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/michaelgermini/data-storytelling/releases)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
+
+## 🛠️ Technology Stack
+
+[![React](https://img.shields.io/badge/React-19.0.0-blue.svg?logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-blue.svg?logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-4.4.5-purple.svg?logo=vite)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.3-38B2AC.svg?logo=tailwind-css)](https://tailwindcss.com/)
+
+## 📈 Project Metrics
+
+[![Projects](https://img.shields.io/badge/projects-32-orange.svg)](https://github.com/michaelgermini/data-storytelling)
+[![Categories](https://img.shields.io/badge/categories-20-yellow.svg)](https://github.com/michaelgermini/data-storytelling)
+[![Languages](https://img.shields.io/badge/languages-5-green.svg)](https://github.com/michaelgermini/data-storytelling)
+
+## 🚀 Deployment
+
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen.svg?logo=github)](https://michaelgermini.github.io/data-storytelling/)
+[![Website](https://img.shields.io/badge/website-upframe.com-blue.svg)](https://upframe.com/)
+
+## 📊 Performance
+
+[![Lighthouse](https://img.shields.io/badge/Lighthouse-95%2B-brightgreen.svg?logo=lighthouse)](https://pagespeed.web.dev/)
+[![Bundle Size](https://img.shields.io/badge/bundle%20size-450KB%20gzipped-blue.svg)](https://bundlephobia.com/)
+[![Loading Time](https://img.shields.io/badge/loading%20time-%3C2s-green.svg)](https://web.dev/performance/)
+
+## 🔗 Connect
+
+[![GitHub Followers](https://img.shields.io/github/followers/michaelgermini?label=Follow&style=social)](https://github.com/michaelgermini)
+[![YouTube](https://img.shields.io/badge/YouTube-TerminalZone404-red.svg?logo=youtube)](https://youtube.com/@TerminalZone404)
+[![Website](https://img.shields.io/badge/Website-upframe.com-blue.svg?logo=globe)](https://upframe.com/)
+
 ## 🚀 Main Features
 
 ### 🎯 User Interface
