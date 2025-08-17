@@ -1,0 +1,54 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background: #0e0f13;
+	color: #e8eaf2;
+	height: 100%;
+	font-family: ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+}
+
+#app {
+	position: fixed;
+	inset: 0;
+}
+
+#hud {
+	position: fixed;
+	left: 16px;
+	top: 16px;
+	background: rgba(12, 14, 18, 0.6);
+	backdrop-filter: blur(6px);
+	border: 1px solid rgba(255,255,255,0.08);
+	border-radius: 10px;
+	padding: 12px 14px;
+	max-width: 360px;
+	z-index: 10;
+}
+
+#hud .title {
+	font-weight: 700;
+	margin-bottom: 6px;
+}
+
+#hud ul {
+	margin: 6px 0 0 18px;
+	padding: 0;
+	opacity: 0.9;
+	font-size: 12px;
+}
+
+.tooltip {
+	position: fixed;
+	padding: 6px 8px;
+	background: rgba(0,0,0,0.75);
+	color: #fff;
+	border-radius: 6px;
+	font-size: 12px;
+	pointer-events: none;
+	transform: translate(-50%, -120%);
+	white-space: pre-line;
+	border: 1px solid rgba(255,255,255,0.1);
+	display: none;
+	z-index: 20;
+}
+

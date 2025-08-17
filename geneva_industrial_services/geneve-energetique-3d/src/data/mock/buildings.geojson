@@ -1,0 +1,10 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "building_id": "B001", "district_id": "D01", "name": "Bâtiment A", "energy_consumption_kwh": 12000, "heat_index": 0.6, "co2_kg": 3400 },
+      "geometry": { "type": "Polygon", "coordinates": [[[6.14,46.20],[6.141,46.20],[6.141,46.201],[6.14,46.201],[6.14,46.20]]] }
+    }
+  ]
+}

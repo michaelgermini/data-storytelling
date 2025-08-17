@@ -1,0 +1,29 @@
+:root {
+  --forest-100: #e6f4ea;
+  --forest-300: #8ecf9e;
+  --forest-500: #2f8f46;
+  --forest-700: #1d5b2b;
+  --earth-500: #795548;
+  --water-500: #2e7bb4;
+  --text-900: #0f1a14;
+  --text-700: #2f3a35;
+  --bg: #f7fbf8;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Lato', 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text-900);
+  background: var(--bg);
+}
+
+section { scroll-margin-top: 72px; }
+
+a { color: var(--forest-700); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.visuallyHidden { position: absolute; left: -9999px; }
+
+

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data Politique 3D – Portfolio interactif</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">Data Politique 3D – Portfolio interactif d’un Data Storyteller</div>
+      <div class="actions">
+        <button id="playStoryBtn" class="primary">Lecture</button>
+      </div>
+    </header>
+
+    <main class="app">
+      <div id="scene-container" class="scene-container" aria-label="Carte 3D de la Suisse"></div>
+
+      <aside id="sidebar" class="sidebar hidden" aria-label="Panneau d’information canton">
+        <div class="sidebar-header">
+          <div id="sidebar-title" class="sidebar-title">Sélection</div>
+          <button id="sidebar-close" title="Fermer">✕</button>
+        </div>
+        <div class="sidebar-content">
+          <section>
+            <h3>Expériences & Projets</h3>
+            <div id="sidebar-projects" class="list"></div>
+          </section>
+          <section>
+            <h3>Compétences mobilisées</h3>
+            <div id="sidebar-skills" class="tags"></div>
+          </section>
+        </div>
+      </aside>
+
+      <div id="chart" class="chart" aria-label="KPI Politiques"></div>
+
+      <div class="hud">
+        <label class="year-control">
+          <span>Année: <strong id="year-value">2020</strong></span>
+          <input id="year-slider" type="range" min="2016" max="2024" step="1" value="2020" />
+        </label>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div>
+        Données: exemples synthétiques (OFS / Open Data Swiss à intégrer) – Technologies: Three.js, GSAP, Plotly.
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/es-module-shims@1.10.0/dist/es-module-shims.min.js"></script>
+    <script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+  </html>
+
+

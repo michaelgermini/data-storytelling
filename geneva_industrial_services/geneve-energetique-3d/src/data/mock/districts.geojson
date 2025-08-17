@@ -1,0 +1,6 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    { "type": "Feature", "properties": { "district_id": "D01", "name": "Centre" }, "geometry": { "type": "Polygon", "coordinates": [[[6.139,46.199],[6.145,46.199],[6.145,46.203],[6.139,46.203],[6.139,46.199]]] } }
+  ]
+}

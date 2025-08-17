@@ -1,0 +1,3 @@
+﻿[
+  { "district_id": "D01", "ts": "2025-01-01T00:00:00Z", "electricity_kwh": 12000, "water_m3": 540, "heat_mwh": 8.2, "gas_m3": 1200, "co2_kg": 3400 }
+]

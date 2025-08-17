@@ -1,0 +1,58 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { background: #0b0f17; color: #eef2f7; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+canvas { display: block; }
+
+#ui-root { position: fixed; inset: 0; pointer-events: none; }
+
+#legend {
+  position: absolute; left: 16px; top: 16px; width: 240px;
+  background: rgba(12, 18, 28, 0.7); backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.06); border-radius: 10px;
+  padding: 12px 14px; pointer-events: auto;
+}
+.legend-title { font-weight: 700; font-size: 14px; margin-bottom: 8px; letter-spacing: 0.3px; }
+#legend ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+#legend li { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #c9d4e4; }
+.legend-hint { margin-top: 10px; font-size: 12px; color: #9fb2cf; opacity: 0.9; }
+
+.color-chip { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.chip-profile { background: #6ee7b7; }
+.chip-skills { background: #93c5fd; }
+.chip-experience { background: #fca5a5; }
+.chip-projects { background: #fcd34d; }
+.chip-education { background: #a78bfa; }
+.chip-contact { background: #fdba74; }
+
+#infoPanel {
+  position: absolute; right: 16px; top: 16px; bottom: 16px; width: 380px;
+  background: rgba(12, 18, 28, 0.82); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.08); border-radius: 12px;
+  display: flex; flex-direction: column; overflow: hidden; pointer-events: auto;
+  transform: translateX(0); transition: transform 300ms ease;
+}
+#infoPanel.closed { transform: translateX(408px); }
+.panel-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.panel-title { font-weight: 700; letter-spacing: 0.3px; }
+#closePanel { appearance: none; background: transparent; border: 0; color: #c9d4e4; font-size: 20px; line-height: 1; cursor: pointer; }
+.panel-content { padding: 14px; overflow: auto; font-size: 14px; color: #d7e1f0; }
+.panel-content h4 { margin: 12px 0 6px; font-size: 14px; color: #ffffff; }
+.panel-content ul { margin: 6px 0 12px 18px; }
+.panel-content li { margin-bottom: 6px; }
+.panel-content .tagline { color: #9fb2cf; margin: 6px 0 12px; }
+
+#hoverTip {
+  position: absolute; padding: 6px 10px; font-size: 12px; color: #0b0f17;
+  background: #fcd34d; border-radius: 6px; pointer-events: none;
+  transform: translate(-50%, -140%); white-space: nowrap; box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.hidden { display: none; }
+
+@media (max-width: 900px) {
+  #legend { width: 200px; }
+  #infoPanel { width: 320px; }
+  #infoPanel.closed { transform: translateX(340px); }
+}
+
+

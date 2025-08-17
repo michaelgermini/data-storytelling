@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV 3D — Nom Prénom</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="ui-root">
+      <div id="legend">
+        <div class="legend-title">Navigation</div>
+        <ul>
+          <li><span class="color-chip chip-profile"></span> Profil</li>
+          <li><span class="color-chip chip-skills"></span> Compétences</li>
+          <li><span class="color-chip chip-experience"></span> Expériences</li>
+          <li><span class="color-chip chip-projects"></span> Projets</li>
+          <li><span class="color-chip chip-education"></span> Formation</li>
+          <li><span class="color-chip chip-contact"></span> Contact</li>
+        </ul>
+        <div class="legend-hint">Cliquez sur un bâtiment pour ouvrir la section</div>
+      </div>
+
+      <div id="infoPanel" class="closed">
+        <div class="panel-header">
+          <div class="panel-title" id="panelTitle">Section</div>
+          <button id="closePanel" title="Fermer">×</button>
+        </div>
+        <div class="panel-content" id="panelContent"></div>
+      </div>
+
+      <div id="hoverTip" class="hidden">Cliquez pour ouvrir</div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+  </html>
+
+

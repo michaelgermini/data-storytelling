@@ -1,0 +1,28 @@
+{
+  "name": "loisirs-3d-portfolio",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --port 5173"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.100.3",
+    "@react-three/fiber": "^8.15.19",
+    "d3": "^7.9.0",
+    "gsap": "^3.12.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.0"
+  }
+}
+

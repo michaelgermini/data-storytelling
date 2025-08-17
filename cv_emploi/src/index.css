@@ -1,0 +1,118 @@
+:root {
+  --bg: #0A0F1E;
+  --cyan: #00FFFF;
+  --white: #FFFFFF;
+  --text: rgba(255,255,255,0.9);
+  --muted: rgba(255,255,255,0.6);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 0.5rem 0;
+}
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.neon {
+  color: var(--white);
+  text-shadow: 0 0 6px rgba(0,255,255,0.7), 0 0 24px rgba(0,255,255,0.35);
+}
+
+.btn {
+  padding: 12px 20px;
+  border: 1px solid rgba(0,255,255,0.5);
+  color: var(--white);
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 12px rgba(0,255,255,0.2) inset;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(0,255,255,0.4), 0 0 12px rgba(0,255,255,0.4) inset;
+}
+
+.btn.neon-cta {
+  background: radial-gradient(closest-side, rgba(0,255,255,0.25), transparent);
+  border-color: var(--cyan);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: linear-gradient(180deg, rgba(10,15,30,0.85), rgba(10,15,30,0.35), transparent);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav a.active, .nav a:hover {
+  color: var(--white);
+  text-shadow: 0 0 10px rgba(0,255,255,0.6);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+
+.subtitle { color: var(--muted); }
+
+.center { text-align: center; }
+
+.hero-title { font-size: clamp(28px, 5vw, 56px); }
+
+.parallax {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}

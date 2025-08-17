@@ -1,0 +1,1 @@
+﻿export type EnergyType = 'electricity' | 'water' | 'gas' | 'heat'\n\nexport interface EnergyStream {\n  id: string\n  type: EnergyType\n  path: [number, number][]\n  intensity: number\n}\n\nexport interface DistrictKPI {\n  district_id: string\n  ts: string\n  electricity_kwh: number\n  water_m3: number\n  heat_mwh: number\n  gas_m3: number\n  co2_kg: number\n}\n

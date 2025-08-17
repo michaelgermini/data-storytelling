@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio Data Scientist — Votre Nom</title>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net">
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<canvas id="bg"></canvas>
+	<div class="overlay">
+		<header class="nav">
+			<div class="brand">Votre Nom</div>
+			<nav>
+				<a href="#apropos">À propos</a>
+				<a href="#competences">Compétences</a>
+				<a href="#experiences">Expériences</a>
+				<a href="#projets">Projets</a>
+				<a class="btn" href="mailto:email@exemple.com">Me contacter</a>
+			</nav>
+		</header>
+		<main>
+			<section class="hero">
+				<h1>Data Scientist</h1>
+				<p>Spécialisé en ML, NLP et MLOps</p>
+				<div class="actions">
+					<a class="btn" href="mailto:email@exemple.com">Contact</a>
+					<a class="btn outline" href="../CV_Data_Scientist_FR.md" target="_blank" rel="noopener">Télécharger le CV</a>
+				</div>
+			</section>
+
+			<section id="apropos" class="section">
+				<h2>À propos</h2>
+				<p>Je suis Data Scientist avec X années d'expérience en modélisation prédictive, NLP et mise en production (MLOps). J'aide les équipes produit à livrer de la valeur mesurable via la data et les modèles.</p>
+			</section>
+
+			<section id="competences" class="section two-col">
+				<h2>Compétences</h2>
+				<ul>
+					<li>Python, SQL, R</li>
+					<li>scikit-learn, XGBoost, LightGBM</li>
+					<li>TensorFlow, PyTorch, Transformers</li>
+					<li>Spark, Airflow/Prefect, dbt</li>
+					<li>MLflow, Docker, Kubernetes</li>
+					<li>AWS/GCP/Azure</li>
+				</ul>
+				<ul>
+					<li>Systèmes de recommandation</li>
+					<li>Prévision de séries temporelles</li>
+					<li>NLP et LLM/RAG</li>
+					<li>Expérimentation A/B</li>
+					<li>Visualisation (Plotly/BI)</li>
+					<li>CI/CD, monitoring</li>
+				</ul>
+			</section>
+
+			<section id="experiences" class="section">
+				<h2>Expériences</h2>
+				<div class="card">
+					<h3>Senior Data Scientist — Entreprise A</h3>
+					<p>+12% de conversion via un moteur de recommandation hybride; pipelines NLP multilingues; cadre A/B; MLOps complet.</p>
+				</div>
+				<div class="card">
+					<h3>Data Scientist — Entreprise B</h3>
+					<p>Prévisions de demande (-18% MAPE); dashboards métiers; optimisation SQL/Spark -50% coût.</p>
+				</div>
+			</section>
+
+			<section id="projets" class="section grid">
+				<h2>Projets</h2>
+				<div class="tile">
+					<h3>Reco produit</h3>
+					<p>Factorisation matricielle + contenu; NDCG@K; A/B en prod.</p>
+				</div>
+				<div class="tile">
+					<h3>Classification tickets</h3>
+					<p>BERT multilingue; -35% SLA; monitoring dérive.</p>
+				</div>
+				<div class="tile">
+					<h3>Prévision ventes</h3>
+					<p>Prophet + régression; API FastAPI; alerting.</p>
+				</div>
+			</section>
+
+			<footer class="footer">© <span id="year"></span> Votre Nom — <a href="mailto:email@exemple.com">email@exemple.com</a></footer>
+		</main>
+	</div>
+	<script type="module" src="./main.js"></script>
+</body>
+</html>
