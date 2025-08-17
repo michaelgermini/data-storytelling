@@ -8,7 +8,9 @@ import {
   Code, 
   CheckCircle,
   Clock,
-  AlertCircle
+  AlertCircle,
+  Terminal,
+  Github
 } from 'lucide-react'
 
 const ProjectDetail = () => {
@@ -82,7 +84,15 @@ const ProjectDetail = () => {
   const handleOpenProject = () => {
     try {
       const projectPath = `${process.cwd()}/${project.path}`
-      window.open(`file:///${projectPath}`, '_blank')
+      
+      // Essayer d'ouvrir dans VS Code
+      const vscodeUrl = `vscode://file/${projectPath}`
+      window.open(vscodeUrl, '_blank')
+      
+      // Fallback: ouvrir dans l'explorateur de fichiers
+      setTimeout(() => {
+        window.open(`file:///${projectPath}`, '_blank')
+      }, 1000)
     } catch (error) {
       console.error('Error opening project folder:', error)
       alert(`Unable to open project folder. Please navigate to: ${project.path}`)
@@ -92,10 +102,47 @@ const ProjectDetail = () => {
   const handleViewCode = () => {
     try {
       const codePath = `${process.cwd()}/${project.path}/src`
-      window.open(`file:///${codePath}`, '_blank')
+      
+      // Essayer d'ouvrir dans VS Code
+      const vscodeUrl = `vscode://file/${codePath}`
+      window.open(vscodeUrl, '_blank')
+      
+      // Fallback: ouvrir dans l'explorateur de fichiers
+      setTimeout(() => {
+        window.open(`file:///${codePath}`, '_blank')
+      }, 1000)
     } catch (error) {
       console.error('Error opening source code folder:', error)
       alert(`Unable to open source code folder. Please navigate to: ${project.path}/src`)
+    }
+  }
+
+  const handleOpenInTerminal = () => {
+    try {
+      const projectPath = `${process.cwd()}/${project.path}`
+      
+      // Essayer d'ouvrir dans le terminal
+      const terminalUrl = `terminal://open?path=${projectPath}`
+      window.open(terminalUrl, '_blank')
+      
+      // Fallback: message d'instruction
+      setTimeout(() => {
+        alert(`To open in terminal, navigate to: ${projectPath}`)
+      }, 1000)
+    } catch (error) {
+      console.error('Error opening terminal:', error)
+      alert(`To open in terminal, navigate to: ${project.path}`)
+    }
+  }
+
+  const handleOpenInGitHub = () => {
+    try {
+      // Ouvrir le repository GitHub si disponible
+      const githubUrl = `https://github.com/michaelgermini/data-storytelling/tree/main/${project.path}`
+      window.open(githubUrl, '_blank')
+    } catch (error) {
+      console.error('Error opening GitHub:', error)
+      alert('Unable to open GitHub repository')
     }
   }
 
@@ -533,18 +580,34 @@ const ProjectDetail = () => {
               <button
                 onClick={handleOpenProject}
                 className="w-full flex items-center justify-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200"
-                title={`Open ${project.path} folder in file explorer`}
+                title={`Open ${project.path} folder in VS Code`}
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
-                Open Project
+                Open in VS Code
               </button>
               <button
                 onClick={handleViewCode}
-                className="w-full flex items-center justify-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200"
-                title={`Open ${project.path}/src folder to view source code`}
+                className="w-full flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                title={`Open ${project.path}/src folder in VS Code`}
               >
                 <Code className="w-4 h-4 mr-2" />
-                View Code
+                View Source Code
+              </button>
+              <button
+                onClick={handleOpenInTerminal}
+                className="w-full flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-200"
+                title={`Open terminal in ${project.path} folder`}
+              >
+                <Terminal className="w-4 h-4 mr-2" />
+                Open Terminal
+              </button>
+              <button
+                onClick={handleOpenInGitHub}
+                className="w-full flex items-center justify-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors duration-200"
+                title={`View ${project.path} on GitHub`}
+              >
+                <Github className="w-4 h-4 mr-2" />
+                View on GitHub
               </button>
             </div>
           </div>
